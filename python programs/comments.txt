@@ -1,0 +1,6 @@
+#this is simple hello world program
+print("hello world")
+#adding two numbers
+a = 10
+b = 20
+print(a+b)
