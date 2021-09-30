@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Simple calculator</title>
+	<script>
+		function addition() 
+		{
+			var x=parseInt(document.getElementById('val1').value);
+			var y=parseInt(document.getElementById('val2').value);
+			document.getElementById("answer").innerHTML = x+y;
+		}
+		function subtraction() 
+		{
+			var x=parseInt(document.getElementById('val1').value);
+			var y=parseInt(document.getElementById('val2').value);
+			document.getElementById("answer").innerHTML = x-y;
+		}
+		function multiply() 
+		{
+			var x=parseInt(document.getElementById('val1').value);
+			var y=parseInt(document.getElementById('val2').value);
+			document.getElementById("answer").innerHTML = x*y;
+		}
+		function divide() 
+		{
+			var x=parseInt(document.getElementById('val1').value);
+			var y=parseInt(document.getElementById('val2').value);
+			document.getElementById("answer").innerHTML = x/y;
+		}
+		function clr() 
+		{
+			document.getElementById("answer").innerHTML = " ";
+			document.getElementById("val1").innerHTML = " ";
+			document.getElementById("val2").innerHTML = " ";
+		}
+	</script>
+</head>
+<body>
+	<table border="1" align="center" bgcolor="#c3c4c7" width="500">
+		<tr align="center"> <th colspan="4"><b>SIMPLE CALCULATOR</b></th></tr>
+		<tr align="center">
+			<td>value1</td>
+			<td><input type="number" id="val1" name="value1"></td>
+			<td>value2</td>
+			<td><input type="number" id="val2" name="value2"></td>
+		</tr>
+		<tr align="center">
+			<td><button onclick="addition()">Addition</button></td>
+			<td><button onclick="subtraction()">Subtraction</button></td>
+			<td><button onclick="multiply()">Multiplication</button></td>
+			<td><button onclick="divide()">Division</button></td>
+		</tr>
+		<tr align="center">
+			<td>Answer</td>
+			<td id="answer"></td>
+			<td colspan="2"><button onclick="clr()">CLEAR ALL</button></td>
+		</tr>
+	</table>
+</body>
+</html>

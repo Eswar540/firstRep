@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dice Game</title>
+	<style>
+		#cen{
+			display: inline;
+		}
+		.center {
+  			display: block;
+  			margin-left: auto;
+  			margin-right: auto;
+  			width: 200px;
+  			height: 200px;
+			}
+	</style>
+	<script>
+		var p1=0,p2=0;
+		function player1() 
+		{
+			var x=Math.floor((Math.random() * 6) + 1);
+			var y=Math.floor((Math.random() * 6) + 1);
+			document.getElementById('ans11').innerHTML=x;
+			document.getElementById('ans12').innerHTML=y;
+			var s1=0;
+			if(x==y && (x==1 || x==2 || x==4 || x==5) )
+			{
+				s1=5;
+				p1+=s1;
+			}
+			else if(x==y && x==3)
+			{
+				s1=0;p1=0;
+			}
+			else if(x==y && x==6)
+			{
+				s1=25;
+				p1+=s1;
+			}
+			document.getElementById('s1').innerHTML=s1;
+			document.getElementById('t1').innerHTML=p1;
+			document.getElementById('turn').innerHTML="Player 2's Turn";
+			winner();
+		}
+		function player2() 
+		{
+			var x=Math.floor((Math.random() * 6) + 1);
+			var y=Math.floor((Math.random() * 6) + 1);
+			document.getElementById('ans21').innerHTML=x;
+			document.getElementById('ans22').innerHTML=y;
+			var s1=0;
+			if(x==y && (x==1 || x==2 || x==4 || x==5) )
+			{
+				s1=5;
+				p2+=s1;
+			}
+			else if(x==y && x==3)
+			{
+				s1=0;p2=0;
+			}
+			else if(x==y && x==6)
+			{
+				s1=25;
+				p2+=s1;
+			}
+			document.getElementById('s2').innerHTML=s1;
+			document.getElementById('t2').innerHTML=p2;
+			document.getElementById('turn').innerHTML="Player 1's Turn";
+			winner();
+		}
+		function winner() 
+		{
+			if(p1>=10)
+			{
+				document.getElementById('winner').innerHTML="Player 1 won the game";
+			}
+			else if(p2>=10)
+			{
+				document.getElementById('winner').innerHTML="Player 2 won the game";
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1 align="center">WELCOME TO THE DICE GAME</h1>
+	<h2>Rules:</h2>
+	<p>
+		1. Each player throws both dice once per turn. You only score if you throw doubles.<br><br>
+		2.Players score five points for doubles ones,twos,fours or fives. A double six scores twenty five points, but if you throw a double three your score goes back to zero.<br><br>
+		3.Add your score as you play.The first player to get fifty points wins the game.<br>
+	</p>
+	<h2 id="turn" align="center">Player 1's Turn</h2>
+	<img src="dice.jpg" class="center">
+	<br>
+	<div align="center">
+		<button onclick="player1()">Throw dice Player 1</button>&nbsp;&nbsp;&nbsp;&nbsp;
+		<button onclick="player2()">Throw dice Player 2</button>
+	</div>
+	<div id="cen" align="center">
+	<p>
+		Player 1 rolled:<span id="ans11"></span>&nbsp;&nbsp; <span id="ans12"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+		Player 2 rolled:<span id="ans21"></span>&nbsp;&nbsp; <span id="ans22"></span>
+	 </p>
+	 <p>
+	 	Player 1 Score:<span id="s1"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Player 2 Score:<span id="s2"></span> 
+	 </p>
+	</div>
+	<div align="center">
+		<p><b>Player 1 Total score: <span id="t1"></span></b></p>
+		<p><b>Player 2 Total score: <span id="t2"></span></b></p>
+	</div>
+	<div align="center">
+			<h2 id="winner"></h2>	
+	</div>
+</body>
+</html>

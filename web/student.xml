@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="attract.xsl"?>
+<!DOCTYPE course [
+<!ELEMENT course (qualification,institution,board,year,cgpa)>
+<!ELEMENT qualification (#PCDATA)>
+<!ELEMENT institution (#PCDATA)>
+<!ELEMENT board (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT cgpa (#PCDATA)>
+]>
+<student>
+	<course>
+		<qualification>B.Tech (CSE)</qualification>
+		<institution>VR Siddhartha Engineering College</institution>
+		<board>JNTUK</board>
+		<year>2022</year>
+		<cgpa>9.2 (CGPA)</cgpa>
+	</course>
+	<course>
+		<qualification>Intermediate</qualification>
+		<institution>PBS Junior College</institution>
+		<board>State Board</board>
+		<year>2018</year>
+		<cgpa>94%</cgpa>
+	</course>
+	<course>
+		<qualification>SSC</qualification>
+		<institution>VPS Public School</institution>
+		<board>State Board</board>
+		<year>2016</year>
+		<cgpa>9.5 (CGPA)</cgpa>
+	</course>
+</student>

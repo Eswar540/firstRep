@@ -1,0 +1,15 @@
+td{
+    padding: 30px;
+    text-align: left;
+    border-bottom: 1px solid grey;
+    border-bottom-width: thin;
+}
+a{
+    text-decoration: none;
+}
+div{
+    font-size: 40px;
+}
+td:hover{
+    background-color:#f5f5f5;;  
+}

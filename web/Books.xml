@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+
+<!DOCTYPE book [
+<!ELEMENT book (title,author,isbn,publisher,edition,price)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT isbn (#PCDATA)>
+<!ELEMENT publisher (#PCDATA)>
+<!ELEMENT edition (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+]>
+
+<books>
+  <book>
+    <title>Let Us C</title>
+    <author>YASHAVANT KANETKAR</author>
+    <isbn>81-265</isbn>
+    <publisher>BPB</publisher>
+    <edition>Sixth</edition>
+    <price>200</price>
+  </book>
+  <book>
+    <title>Mastering C++</title>
+    <author>K R VENUGOPAL</author>
+    <isbn>81-695</isbn>
+    <publisher>McGraw-Hill</publisher>
+    <edition>Second</edition>
+    <price>300</price>
+  </book>
+  <book>
+    <title>Java</title>
+    <author>HERBERT SCHILDT</author>
+    <isbn>81-265</isbn>
+    <publisher>McGraw-Hill</publisher>
+    <edition>Seventh</edition>
+    <price>400</price>
+  </book>
+  <book>
+    <title>Python</title>
+    <author>MARTIN C.BROWN</author>
+    <isbn>81-265</isbn>
+    <publisher>McGraw-Hill</publisher>
+    <edition>Seventh</edition>
+    <price>500</price>
+  </book>
+</books>

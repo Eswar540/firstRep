@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive customer form</title>
+    <script type="text/javascript">
+        function validate()
+        {
+            var cusid=document.f.cid.value;
+            if(cusid.length>3)
+            {
+                window.alert("Customer id should not be more than 3 letters!");
+            }
+            var name=document.f.n.value;
+            if((name.length<6) || (name.length>15))
+                {
+                    window.alert("Name should between 6 and 15 charachters");
+                }
+            var an=document.f.acn.value;
+            if(an.length<6 || an.length>6)
+            {
+                alert("Account number should have 6 characters.");
+            }
+            var acdep=document.f.ad.value;
+            if(acdep<500 || acdep>50000)
+                {
+                    alert("Amount to be depostied shold be in between 500 and 50,000 Rupees");
+                }
+            var ema=document.f.em.value;
+            var cema=/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
+            if(!ema.match(cema))
+			{
+					window.alert("E-Mail ID must follow the standard pattern name@domain.com");					
+			}
+            var ra=document.f.roi.value;
+            var rra=/^[0-9]$/;
+            if(!ra.match(rra))
+            {
+                alert("Rate of interest Should be in number");
+            }
+            var mam=document.f.ma.value;
+            var rmam=/^[0-9]$/;
+            if(!mam.match(rmam))
+            {
+                alert("Maturity Amount Should be in number");                
+            }
+        }  
+	 </script>
+</head>
+<body>
+    <h1 style="text-align:center; color:blue;"><i><u>CUSTOMER INFORMATION</u></i></h1>
+    <form name="f">
+        <table border="0" align="center" height="400" width="auto">
+            <tr>
+                <td>CUSTOMER_ID</td>
+                <td><input type="text" name="cid"></td>
+            </tr>
+            <tr>
+                <td>NAME</td>
+                <td><input type="text" name="n"></td>
+            </tr>
+            <tr>
+                <td>ACCOUNT NUMBER</td>
+                <td><input type="text" name="acn"></td>
+            </tr>
+            <tr>
+                <td>DEPOSIT TYPE</td>
+                <td><input type="radio" name="dt">FIXED DEPOSIT</td>
+                <td><input type="radio" name="dt">RECCURING DEPOSIT</td>
+            </tr>
+            <tr>
+                <td>AMOUNT TO DEPOSIT</td>
+                <td><input type="text" name="ad"></td>
+            </tr>
+            <tr>
+                <td>NO.OF YEARS</td>
+                <td><input type="radio" name="noy">ONE</td>
+                <td><input type="radio" name="noy">TWO</td>
+                <td><input type="radio" name="noy">THREE</td>
+            </tr>
+            <tr>
+                <td>EMAIL</td>
+                <td><input type="text" name="em"></td>
+            </tr>
+            <tr>
+                <td>RATE OF INTEREST</td>
+                <td><input type="text" name="roi"></td>
+            </tr>
+            <tr>
+                <td>MATURITY AMOUNT</td>
+                <td><input type="text" name="ma"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="submit" 								onclick="validate()"></td>
+                <td><input type="reset" name="reset"></td>
+            </tr>
+        </table>
+    </form>    
+</body>
+</html>

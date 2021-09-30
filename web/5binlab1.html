@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Squares and Cubes using js</title>
+    <style>
+        table,tr,td
+        {
+            border:2px solid black;
+            background-color: cornflowerblue;
+            text-align:center;
+            width:33%;
+            margin-left:380px;
+            border-collapse:collapse;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.write("<table><tr><th colspan='3'>NUMBERS FROM ZERO TO TEN WITH THEIR SQUARES AND CUBES</th></tr>");
+        document.write("<tr><td>Number</td><td>Square</td><td>Cube</td></tr>");
+        for( var i=0 ; i<=10 ; i++)
+        {
+            document.write("<tr><td>"+i+"</td><td>"+i*i+"</td><td>"+i*i*i+"</td></tr>");
+        }
+    </script>   
+</body>
+</html>
