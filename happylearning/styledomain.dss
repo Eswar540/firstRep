@@ -1,0 +1,29 @@
+body{
+				background-color:#8BCBFB;
+				font-family:Garamond, serif;
+			}
+			img{
+				border-radius: 30px;
+				box-shadow: 10px 10px 5px black;
+			}
+			img:hover
+			{
+				box-shadow: 10px 10px 5px #64ede9;
+			}
+			div
+			{
+				background-color:#3669C5;
+				width:800;
+				height:500;
+				border-radius: 30px;
+				box-shadow: 10px 10px 5px black;
+			}
+			h1,h3,a
+			{
+				color:#2c2c73;
+			}
+			img
+			{
+				width:300;
+				height:150;
+			}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Image Change on Hover</title>
+        <style>
+        body{
+            background-color: lightyellow;
+        }
+        #smile{
+            color: brown;
+            font-size:25px;
+        }
+        #tab{
+            float: right;
+        }
+        #q{
+            font-size: 40px;
+            float: left;
+        }
+        div{
+            color: dimgray;
+            float: left;
+            font-size: 25px;
+        }
+            h3{
+                color: darkcyan;
+                font-size: 40px;
+            }
+            #image {
+                position: relative;
+                display:  inline-block;
+            }
+            #change{
+                display:none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 99;
+            }
+            #image:hover #change{
+                display: inline;
+                width: 400px;
+                height: 250px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <center>
+        <h3>Welcome to Hover</h3><hr>
+        </center>
+        <div id="image">
+            <img src="abc.jpg" id="one" alt="envelope image" width="400" height="250">
+            <img src="pic2.jpg" id="change" alt="message">
+        </div>
+        <div><br>
+            &nbsp &nbsp Hey!!<br>
+            &nbsp &nbsp There is a message for you in the envelope.<br>
+            &nbsp &nbsp Excited to see?<br>
+            &nbsp &nbsp Okay!<br>
+            &nbsp &nbsp Place your mouse arrow on the image
+            to see the message we have for you.<br>
+            &nbsp &nbsp Thankyou!
+        </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </body>

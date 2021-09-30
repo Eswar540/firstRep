@@ -1,0 +1,153 @@
+<html>
+	<head>
+		<style>
+			body
+			{
+				
+				background-image:url(purple.png);
+				background-position:right bottom;
+				background-repeat: no-repeat;
+				background-size:cover;
+			}
+			table
+			{
+				border-radius: 15px;
+				width: 350px;
+				height: 50px;
+				box-shadow: 10px 10px 5px #EDE1FF;
+			}
+			td
+			{
+				padding:10px;
+				text-align:right;
+			}
+			button
+			{
+				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+				padding:10px 20px;
+				border-radius:15px;
+				color:#73489D;
+			}
+			
+			button:hover
+			{
+				background-color:#73489D ;
+				color: white;
+			}
+			input
+			{
+				padding: 5px 20px;
+				border-radius:15px;
+			}
+			a
+			{
+				color:#73489D;
+			}
+			a:hover
+			{
+				background-color:#73489D ;
+				color: white;
+			}
+			p
+			{
+				color:white;
+			}
+		</style>
+		
+	</head>
+	<body style="line-height:10px">
+		<form style="margin-left:620;margin-top:90" name="myForm" method="post">
+			<table bgcolor="#73489D">
+				<tr>
+					<td colspan=2 style="text-align:center;">
+						<h2 style="color:white;">LOGIN</h2>
+					</td>
+				</tr>
+				<tr>
+					<td style="color:white;">
+						User Name:
+					</td>
+					<td>
+						<input type="text" name="username"></input>
+					</td>
+				</tr>
+				<tr>
+					<td style="color:white;">
+						Password:
+					</td>
+					<td>
+						<input type="password" name="password"></input>
+					</td>
+				</tr>
+				<tr>
+					<td colspan=2 style="text-align:center">
+						<button onclick="return validateForm()" id="login">LOGIN</button>
+					</td>
+				</tr>
+				
+				<tr>
+					<td colspan=2 style="text-align:center">
+						<button id="goto" style="display:none;margin-left:100;" ><a href="coursehome.html" target="bottom" style="text-decoration:none;">Go to Courses</a></button>
+					</td>
+				</tr>
+				<tr>
+					<td colspan=2 style="text-align:center">
+						<p id="p"></p>
+					</td>
+				</tr>
+			</table>
+		</form>
+		<table bgcolor="#73489D" style="margin-left:620;">
+			<tr>
+				<td style="text-align:center;">
+					<p style="color:white;">New user? Click here to <a href="registration.html" target="bottom" style="color:white;">Sign up.</a></p>
+				</td>
+			</tr>
+		</table>
+		<script>
+			function validateForm()
+			{
+				
+				var a = document.forms["myForm"]["username"].value;
+				a=String(a);
+				if(a == "")
+				{
+					alert("Please enter User Name !");
+					return false;
+				}
+				var d = document.forms["myForm"]["password"].value;
+				d=String(d);
+				if(d=="")
+				{
+					alert("Please enter Password !");
+					return false;
+				}
+				if(d.length < 6)
+				{
+					alert("Your password should contain atleast 6 characters");
+					return false;
+				}
+				document.getElementById("p").innerHTML="You are logged in";
+				var x = document.getElementById("login");
+				if (x.style.display === "none") 
+				{
+					x.style.display = "block";
+				} 
+				else 
+				{
+					x.style.display = "none";
+				}
+				var x = document.getElementById("goto");
+				if (x.style.display === "none") 
+				{
+					x.style.display = "block";
+				} 
+				else 
+				{
+					x.style.display = "none";
+				}
+				return false;
+			}
+		</script>
+	</body>
+</html>

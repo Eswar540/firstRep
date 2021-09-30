@@ -1,0 +1,259 @@
+<html>
+	<head>
+		<style>
+			body
+			{
+				background-image:url(purple6.png);
+				background-color:#EDE1FF;
+				background-repeat: no-repeat;
+				background-size:100%;
+			}
+			table
+			{
+				border-radius: 15px;
+				width: 475px;
+				height: 50px;
+				box-shadow: 10px 10px 5px grey;
+			}
+			td
+			{
+				padding:5px;
+				text-align:right;
+			}
+			button
+			{
+				padding:10px 20px;
+				border-radius:15px;
+				color:#73489D;
+				margin-left:170px;
+				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+			}
+			button:hover
+			{
+				background-color:#73489D;
+				color: white;
+			}
+			input
+			{
+				padding: 5px 20px;
+				border-radius:15px;
+			}
+			a
+			{
+				text-decoration:none;
+				color:#73489D;
+			}
+			a:hover
+			{
+				background-color:#73489D;
+				color: white;
+			}
+			p
+			{
+				color:white;
+			}
+		</style>
+		
+		
+	</head>
+	<body bgcolor="black">
+		<form style="margin-left:500;margin-top:90" name="myForm" method="post">
+			<table bgcolor="#73489D" style="margin-left:0px;">
+				<tr>
+					<td colspan=2 style="text-align:center;">
+						<h1 style="color:white;">SIGN UP</h2>
+					</td>
+				</tr>
+				<tr>
+					<td style="color:white;">
+						First Name:
+					</td>
+					<td style="text-align:left;">
+						<input type="text" name="firstname"></input>
+					</td>
+				</tr>
+				<tr>
+					<td style="color:white;">
+						Last Name:
+					</td>
+					<td style="text-align:left;">
+						<input type="text" name="lastname"></input>
+					</td>
+				</tr>
+				<tr>
+					<td style="color:white;">
+						Email ID:
+					</td>
+					<td style="text-align:left;">
+						<input type="email" name="email"></input>
+					</td>
+				</tr>
+				<tr>
+					<td style="color:white;">
+						Create Password:
+					</td>
+					<td style="text-align:left;">
+						<input type="password" name="password1"></input>
+					</td>
+				</tr>
+				<tr>
+					<td style="color:white;">
+						Confirm Password:
+					</td>
+					<td style="text-align:left;">
+						<input type="password" name="password2"></input>
+					</td>
+				</tr>
+				<tr>
+					<td style="color:white;">
+						Contact Number:
+					</td>
+					<td style="text-align:left;">
+						<input type="text" name="contact"></input>
+					</td>
+				</tr>
+				<tr>
+					<td style="color:white;">
+						Designation:
+					</td>
+					<td style="text-align:left;">
+						<input type="radio" id="1" name="designation" checked>
+						<label id="1" style="color:white;">Student</label>
+						<input type="radio" id="2" name="designation">
+						<label id="2" style="color:white;">Teacher</label>
+						<input type="radio" id="3" name="designation">
+						<label id="3" style="color:white;">Employee</label>
+						<input type="radio" id="4" name="designation">
+						<label id="4" style="color:white;">Other</label>
+					</td>
+				</tr>
+				<tr>
+					<td colspan=2 style="text-align:left;">
+						<button onclick="return validateForm()" id="signin">SIGN IN</button>
+					</td>
+				</tr>
+				<tr>
+					<td colspan=2 style="text-align:center">
+						<button style="margin-left:170;display:none;" id="goto"><a href="coursehome.html" target="bottom" style="text-decoration:none;">Go to Courses</a></button>
+					</td>
+				</tr>
+				<tr>
+					<td colspan=2 style="text-align:center">
+						<p id="p"></p>
+					</td>
+				</tr>
+			</table><br>
+			
+			
+		</form>	
+	<script>
+			function validateForm()
+			{
+				var a = document.forms["myForm"]["firstname"].value;
+				a=String(a);
+				if(a == "")
+				{
+					alert("Please enter First Name !");
+					return false;
+				}
+				if (! /^[a-zA-Z\s]+$/.test(a)) 
+				{
+					alert("First Name should contain only alphabets");
+					return false;
+				}
+				var b = document.forms["myForm"]["lastname"].value;
+				b=String(b);
+				if(b == "")
+				{
+					alert("Please enter Last Name !");
+					return false;
+				}
+				if (! /^[a-zA-Z\s]+$/.test(b)) 
+				{
+					alert("Last Name should contain only alphabets");
+					return false;
+				}
+				var c = document.forms["myForm"]["email"].value;
+				c=String(c);
+				if(c=="")
+				{
+					alert("Please enter Email ID !");
+					return false;
+				}
+				if(c.search(".com")<0 || c.search("@")<0 )
+				{
+					alert("Email must be of the format name@domain.com !");
+					return false;
+				}
+				var d = document.forms["myForm"]["password1"].value;
+				d=String(d);
+				if(d=="")
+				{
+					alert("Please enter Password !");
+					return false;
+				}
+				if(d.length < 6)
+				{
+					alert("Password should contain atleast 6 characters");
+					return false;
+				}
+				var e = document.forms["myForm"]["password2"].value;
+				e=String(e);
+				if(e=="")
+				{
+					alert("Please enter Password !");
+					return false;
+				}
+				if(e.length < 6)
+				{
+					alert("Password should contain atleast 6 characters");
+					return false;
+				}
+				if(d != e)
+				{
+					alert("Both passwords should match!");
+					return false;
+				}
+				var f = document.forms["myForm"]["contact"].value;
+				f=String(f);
+				if(f=="")
+				{
+					alert("Please enter Phone number !");
+					return false;
+				}
+				if(f.length != 10)
+				{
+					alert("Phone number must contain 10 digits");
+					return false;
+				}
+				if (! /^[0-9\s]+$/.test(f))
+				{
+					alert("Phone number must contain digits only!");
+					return false;
+				}
+				
+				document.getElementById("p").innerHTML="You are logged in";
+				var x = document.getElementById("signin");
+				if (x.style.display === "none") 
+				{
+					x.style.display = "block";
+				} 
+				else 
+				{
+					x.style.display = "none";
+				}
+				var x = document.getElementById("goto");
+				if (x.style.display === "none") 
+				{
+					x.style.display = "block";
+				} 
+				else 
+				{
+					x.style.display = "none";
+				}
+				return false;
+			}
+		</script>
+				
+	</body>
+</html>

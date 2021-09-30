@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<style>
+			body
+			{
+				background-position:right bottom;
+				background-repeat: no-repeat,repeat;
+				background-size:100% 100%;
+			}
+			table
+			{
+				border-radius: 15px;
+				width: 350px;
+				height: 50px;
+				box-shadow: 10px 10px 5px black;
+			}
+			td
+			{
+				padding:10px;
+				text-align:right;
+			}
+			button
+			{
+				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+				padding:10px 20px;
+				border-radius:15px;
+				color:#3669C5;
+			}
+			button:hover
+			{
+				background-color:#3669C5 ;
+				color: white;
+			}
+			input
+			{
+				padding: 5px 20px;
+				border-radius:15px;
+			}
+			img
+			{
+			}
+		</style>
+
+	</head>
+	<body style="line-height:10px">
+		<center>
+			<img src="sbi.png" alt="" height="200px" width="600px">
+
+		</center>
+   
+		<form style="margin-left:550;margin-top:90" name="myForm" method="post">
+			<table bgcolor="#3669C5">
+				<tr>
+					<td colspan=2 style="text-align:center;">
+						<h2 style="color:white;">Welcome to SBI</h2>
+					</td>
+				</tr>
+				<tr>
+					<td style="color:white;">
+						User ID:
+					</td>
+					<td>
+						<input type="text" name="username"></input>
+					</td>
+				</tr>
+				<tr>
+					<td style="color:white;">
+						Password:
+					</td>
+					<td>
+						<input type="password" name="password"></input>
+					</td>
+				</tr>
+				<tr>
+					<td colspan=2 style="text-align:center">
+						<button onclick="return validateForm()">LOGIN</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+		
+	</body>
+</html>
